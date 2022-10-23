@@ -7,3 +7,15 @@
 <li>SASS</li>
 <li>Javascript</li>
 
+<br>
+**Installation**
+
+ `$ git clone https://github.com/nesathanozturk/js-todolist.git`
+
+ `$ cd js-todolist`
+ 
+ `$ npm install `
+ 
+ `$ npm start`
+
+
