@@ -98,7 +98,7 @@ body {
 }
 .list-container li.completed {
   text-decoration: line-through;
-  background-color: #EFEFEF;
+  background-color: #d5d5d5;
 }
 
 .close {
