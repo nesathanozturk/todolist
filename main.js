@@ -28,7 +28,7 @@ function toDoItems(list) {
         ulList.appendChild(liEl);
         input.value = ""; // Ekleme yaptıktan sonra input değerini temizler.
 
-// X:
+// X BUTTON:
     const span = document.createElement("span");
     const text = document.createTextNode("\u00D7");
     span.className = "close";
