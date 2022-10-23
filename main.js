@@ -7,7 +7,7 @@ const close = document.getElementsByClassName("close");
 
 const todos = JSON.parse(localStorage.getItem("ulList"));
 if (todos) {
-    todos.forEach(list => toDoItems(list))
+    todos.forEach(list => toDoItems(list));
 } 
 
 // ITEMS FUNCTIONS:
@@ -20,8 +20,8 @@ function toDoItems(list) {
         inputText = list.text;
     }
 
-    if (input.value === "") {
-        trim() // Listeye boş ekleme yapmamızı engeller.
+    if (input.value.trim() === "") {
+        alert("You must make an addition");
     } else {
         let liEl = document.createElement("li");
         liEl.innerText = input.value;
