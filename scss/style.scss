@@ -1,0 +1,101 @@
+@import "_reset";
+@import "_variables";
+@import "_mixin";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,700&display=swap');
+
+body {
+    background: $bg-gradient;
+    font-family: $font;
+}
+
+// CONTAINER
+.container {
+    color: $black;
+    width: 40rem;
+    height: 5.5rem;
+    margin: 1rem auto 2.7rem auto;
+    padding: 1rem;
+    text-align: center;
+
+    h1 {
+        color: $white;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    input {
+        width: 20rem;
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        padding: 1.2rem;
+        background-color: $white;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+           @include text;
+        }
+
+        &:valid {
+            @include text;
+        }
+    }
+
+    button {
+        background: $btn-bg;
+        color: $white;
+        width: 6.5rem;
+        height: 3rem;
+        margin-left: 0.188rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            background: $btn-hover;
+        }
+    }
+}
+
+// LIST CONTAINER
+.list-container {
+    border-radius: 5px;
+    
+    li {
+        background-color: $white;
+        color: $black;
+        width: 26.9rem;
+        height: 3rem;
+        margin: auto;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 300;
+        border-bottom: 1px solid rgb(165, 160, 160);
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        transition: 0.2s;
+
+        &.completed {
+            text-decoration: line-through;
+            background-color: $completed;
+        }
+    }
+}
+
+// CLOSE BUTTON
+.close {
+    color: #CF0A0A;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+  }
