@@ -8,7 +8,7 @@ const close = document.getElementsByClassName("close");
 const todos = JSON.parse(localStorage.getItem("ulList"));
 if (todos) {
     todos.forEach(list => toDoItems(list));
-} 
+}; 
 
 // ITEMS FUNCTIONS:
 button.addEventListener("click", toDoItems);
@@ -18,7 +18,7 @@ function toDoItems(list) {
     let inputText = input.value;
     if (list) {
         inputText = list.text;
-    }
+    };
 
     if (input.value.trim() === "") {
         alert("You must make an addition");
@@ -26,7 +26,7 @@ function toDoItems(list) {
         let liEl = document.createElement("li");
         liEl.innerText = input.value;
         ulList.appendChild(liEl);
-        input.value = ""; // Ekleme yaptıktan sonra input değerini temizler.
+        input.value = "";
 
 // X BUTTON:
     const span = document.createElement("span");
@@ -38,7 +38,7 @@ function toDoItems(list) {
 // COMPLETED:
     liEl.addEventListener("click", () => liEl.classList.toggle("completed"))
     addLS();
-    }
+    };
 
 // REMOVE ITEM:
     for (let i = 0; i < close.length; i++) {
@@ -46,9 +46,9 @@ function toDoItems(list) {
             let liEl = this.parentElement;
             liEl.style.display = "none";
             addLS();
-        }
-    }   
-}
+        };
+    }; 
+};
 
 // LOCAL STORAGE:
 function addLS() {
@@ -63,4 +63,4 @@ function addLS() {
         })
     })
     localStorage.setItem("todos", JSON.stringify(todos));
-}
+};
